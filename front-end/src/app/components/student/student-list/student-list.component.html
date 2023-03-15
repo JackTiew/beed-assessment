@@ -1,0 +1,22 @@
+<div style="padding: 40px 20px;">
+    <div style="float: right; margin-bottom: 20px; ">
+        <button (click)="addStudent()" style="margin-right: 20px;">+ Add student</button>
+        <button (click)="addStudentFromAPI()">Call API</button>
+    </div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let student of studentList">
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.sex == 1 ? "Male" : "Female"}}</td>
+            <td>
+                <button (click)="deleteStudent(student.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

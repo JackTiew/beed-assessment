@@ -1,0 +1,21 @@
+<form class="student-form" [formGroup]="studentForm">
+    <mat-form-field class="input">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+  
+    <mat-form-field class="input">
+      <mat-label>Age</mat-label>
+      <input matInput formControlName="age">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Sex</mat-label>
+        <mat-select formControlName="sex">
+          <mat-option *ngFor="let gender of sexList" [value]="gender.value">
+            {{gender.label}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</form>
+<button style="float: right;" (click)="addStudent()">Submit</button>
