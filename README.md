@@ -1,4 +1,4 @@
 # beed-assessment
 
-Angular Version: 14__
+Angular Version: 14  
 Node version: 16
